@@ -3,12 +3,15 @@
 
 local opt = vim.opt	-- Access list and map style option from Lua
 
+-- Disable mouse
+opt.mouse = ''
+
 -- Line wrapping
 opt.wrap = false
 
 -- Line numbers
 opt.relativenumber = true   -- Show the line number relative to the line with the cursor
-opt.scrolloff = 999         -- Minimal number of screen lines to keep above and below the cursor
+opt.scrolloff = 5           -- Minimal number of screen lines to keep above and below the cursor
 opt.number = true           -- Print line number in front of each line
 
 -- Tabs and indentation

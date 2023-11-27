@@ -5,9 +5,10 @@ return {
     branch = 'v3.x',
     opts = {
         close_if_last_window = true,
-        popup_border_style = 'rounded',
+        enable_git_status = false,
+        enable_diagnostics = false,
         window = {
-            width = 30
+            width = 40
         }
     },
     dependencies = {
@@ -17,6 +18,7 @@ return {
     },
     keys = {
         { '<Leader>e', '<cmd>Neotree toggle<cr>', desc = 'Open Neotree' }
-    }
+    },
+    event = { 'BufEnter' }
 }
 
