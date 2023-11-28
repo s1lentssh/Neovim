@@ -11,7 +11,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
     callback = function()
         if is_file() then
             vim.cmd('Neotree show')
-            vim.cmd('TagbarOpen')
         end
     end
 })
