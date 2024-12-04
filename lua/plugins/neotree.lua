@@ -20,6 +20,18 @@ return {
                 enabled = true,
             },
         },
+        filesystem = {
+            components = {
+                name = function(config, node, state)
+                    local components = require("neo-tree.sources.common.components")
+                    local name = components.name(config, node, state)
+                    if node:get_depth() == 1 then
+                        name.text = vim.fs.basename(vim.loop.cwd() or "")
+                    end
+                    return name
+                end,
+            },
+        },
     },
     keys = {
         { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle file explorer" },
