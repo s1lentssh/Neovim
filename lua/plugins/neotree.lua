@@ -1,45 +1,27 @@
 -- Copyright (C) 2024 s1lentssh
 
 return {
-    "nvim-tree/nvim-tree.lua",
-    event = "VimEnter",
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    event = "BufEnter",
     dependencies = {
-        "nvim-tree/nvim-web-devicons",
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
     },
     opts = {
-        view = {
-            side = "left",
+        close_if_last_window = true,
+        popup_border_style = "rounded",
+        window = {
             width = 30,
         },
-        hijack_directories = {
-            enable = true,
-        },
-        hijack_cursor = true,
-        update_cwd = true,
-        renderer = {
-            indent_markers = {
-                enable = true,
+        buffers = {
+            follow_current_file = {
+                enabled = true,
             },
-            root_folder_label = " ",
-        },
-        actions = {
-            open_file = {
-                quit_on_open = false,
-                window_picker = {
-                    enable = false,
-                },
-            },
-        },
-        git = {
-            ignore = false,
         },
     },
-    config = function(_, opts)
-        local nvimtree = require("nvim-tree")
-        nvimtree.setup(opts)
-    end,
     keys = {
-        { "<leader>ee", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file explorer" },
-        { "<leader>ef", "<cmd>NvimTreeFindFileToggle<cr>", desc = "Toggle file explorer on current file" },
+        { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle file explorer" },
     },
 }

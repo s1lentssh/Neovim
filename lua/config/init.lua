@@ -3,4 +3,4 @@
 require("config.defaults")
 require("config.keymaps")
 require("config.lazy")
-require("config.commands")
+require("config.neovide")
