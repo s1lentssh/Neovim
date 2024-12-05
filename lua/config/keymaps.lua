@@ -4,8 +4,6 @@ local keymap = vim.keymap
 
 -- Bind leader key
 vim.g.mapleader = " "
--- vim.g.maplocalleader = "\\"
--- keymap.set('n', '<Space>', '<Nop>', { desc = 'Disable default space behavior' })
 
 -- General
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
@@ -26,3 +24,8 @@ keymap.set("n", "<leader>o", "<cmd>enew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>w", "<cmd>Bdelete<CR>", { desc = "Close current tab" })
 keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Go to previous tab" })
+
+-- Workflow
+keymap.set("n", "<C-s>", "<cmd>w<cr>", { desc = "Save current file" })
+keymap.set("n", "<C-q>", "<cmd>Bdelete<cr>", { desc = "Close current tab" })
+keymap.set("n", "<C-r>", "<cmd>AerialToggle!<cr>", { desc = "Toggle outline" })
