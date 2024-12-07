@@ -55,7 +55,7 @@ return {
                 keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
                 opts.desc = "Show documentation"
-                keymap.set("n", "K", vim.lsp.buf.hover, opts)
+                keymap.set("n", "K", require("noice.lsp").hover, opts)
 
                 opts.desc = "Restart LSP"
                 keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)

@@ -47,9 +47,19 @@ return {
                 { name = "path" },
             }),
             formatting = {
+                fields = { "abbr", "kind", "menu" },
+                expandable_indicator = true,
                 format = lspkind.cmp_format({
                     maxwidth = 50,
                     ellipsis_char = "...",
+                }),
+            },
+            window = {
+                completion = cmp.config.window.bordered({
+                    winhighlight = "Normal:None,FloatBorder:None,CursorLine:PmenuSel,Search:None",
+                }),
+                documentation = cmp.config.window.bordered({
+                    winhighlight = "Normal:None,FloatBorder:None,CursorLine:PmenuSel,Search:None",
                 }),
             },
         })
