@@ -34,6 +34,6 @@ return {
         },
     },
     keys = {
-        { "<C-e>", "<cmd>Neotree toggle<cr>", desc = "Toggle file explorer" },
+        { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle file explorer" },
     },
 }
