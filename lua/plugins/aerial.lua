@@ -17,7 +17,7 @@ return {
             default_direction = "right",
             width = 30,
         },
-        open_automatic = true,
+        open_automatic = false,
         close_automatic_events = { "unsupported" },
     },
 }

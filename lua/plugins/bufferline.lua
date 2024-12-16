@@ -9,13 +9,13 @@ return {
             offsets = {
                 {
                     filetype = "neo-tree",
-                    text = "File Explorer",
+                    text = "📁 File Explorer",
                     text_align = "left",
                     separator = false,
                 },
                 {
                     filetype = "aerial",
-                    text = "Outliner",
+                    text = "🗒️ Outliner",
                     text_align = "left",
                     separator = false,
                 },
